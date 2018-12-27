@@ -1,0 +1,13 @@
+<h1>Main board</h1>
+<a href='..'>BACK</a>
+
+{% if board_list %}
+ <ul>
+    {% for context in board_list %}
+    <li><a href='{{ context.id }}'>NO.{{ context.id }} Title : {{context.title}}  Author : {{context.author}}  Date : {{context.create_date}}</a></li>
+    <p>{{context.context}}</p>
+    {% endfor %}
+ </ul>
+ {% else %}
+ <p>Don't exist context</p>
+ {% endif %}
